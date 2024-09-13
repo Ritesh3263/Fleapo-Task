@@ -1,0 +1,249 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #0F1320;
+    font-family: "Century Gothic", sans-serif;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+}
+
+/* ///////////////////Header///////////////////// */
+.header{
+    height: 15rem;
+    border-bottom-left-radius: 350px;
+    background-color: #fff;
+}
+
+/* ///////////////////Footer///////////////////// */
+.footer{
+    height: 15rem;
+    border-top-right-radius: 350px;
+    background-color: #fff;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+/* ///////////////////Main Content Start///////////////////// */
+.main_body{
+    padding: 10rem 0;
+    max-width: 1574px;
+    margin: 0 auto;
+}
+
+/* /////////////////// First Section - Cards ///////////////////// */
+.main_body .cards{
+    display: flex;
+    justify-content:center;
+    gap: 4rem;
+}
+
+.main_body .cards .card .top{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.main_body .cards .card .top .counter{
+    /* background-color: #22A75D; */
+    height: 82px;
+    width: 82px;
+    border-radius: 50%;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+}
+
+.main_body .cards .card .top .label-year{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;  
+    transform: translateY(1rem);
+}
+
+.main_body .cards .card .top .label-year::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.main_body .cards .card .bottom ol{
+    list-style-type: none; 
+    font-size: 16px;
+    padding-top: 50px;
+    color: #9FA1A6;
+    list-style-position: inside;
+    line-height: 32px;
+}
+
+.main_body .cards .card-1 .top .counter {
+    background-color: #22A75D;
+    filter: drop-shadow(0px 15px 25px #22A75D40);
+}
+.main_body .cards .card-1 .label-year::before{
+    background-color: #22A75D;
+}
+.main_body .cards .card-2 .label-year::before{
+    background-color: #2278D4;
+}
+.main_body .cards .card-3 .label-year::before{
+    background-color: #FFD100;
+}
+.main_body .cards .card-4 .label-year::before{
+    background-color: #E20613;
+}
+.main_body .cards .card-2 .top .counter{       
+    background-color: #2278D4; 
+    filter: drop-shadow(0px 15px 25px rgba(34, 120, 212, 0.25));
+}
+.main_body .cards .card-3 .top .counter{
+    background-color: #FFD100;
+    filter: drop-shadow(0px 15px 25px #FFD10040);
+}
+.main_body .cards .card-4 .top .counter{
+    background-color: #E20613;
+    filter: drop-shadow(0px 15px 25px #E2061340);
+}
+.main_body .cards .card .bottom ol li span{
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 1rem;
+}
+.main_body .cards .card-1 .bottom ol li span{
+    color: #22A75D;
+}
+.main_body .cards .card-2 .bottom ol li span{
+    color: #2278D4;
+}
+.main_body .cards .card-3 .bottom ol li span{
+    color: #FFD100;
+}
+.main_body .cards .card-4 .bottom ol li span{
+    color: #E20613;
+}
+
+/* /////////////////// Second Section - Content ///////////////////// */
+.main_body .content{
+    display: flex;
+    flex: 0 0 50%;
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: 8rem;
+    gap: 4rem;
+}
+
+.main_body .content .text{
+    max-width: 644px;
+}
+
+.main_body .content .text, .main_body .content .media{
+    position: relative;
+}
+
+.main_body .content .media img{
+    width: 891px;
+    height: 928px;
+}
+
+.main_body .content .text{
+    max-width: 644px;  
+}
+
+.main_body .content .text .btn-prime{
+    padding: 8px 16px;
+    min-width: 150px;
+    min-height: 48px;
+    border-radius: 30px;
+    color: #fff;
+    border: 2px solid #22A75D;
+    margin-top: 1rem;
+}
+
+.main_body .content .text .head{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.main_body .content .text .para{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main_body .content .text .para .white{
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.main_body .content .text .para .grey{
+    color: #9FA1A6;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/* /////////////////// Main Content End ///////////////////// */
+
+
+
+/* ////////////////////////////////// Responsiveness for mobile screen Start ///////////////////////////////////// */
+@media screen and (max-width: 576px) {
+    
+    .header, .footer{
+        display: none;
+    }
+
+    .main_body{
+        padding: 1rem;
+    }
+
+    .cards{
+        flex-direction: column;
+        gap: 3rem !important;
+    }
+
+    .cards .card .bottom ol{
+        padding-top: 2rem !important;
+    }
+
+    .main_body .content{
+        flex-direction: column;
+    }
+
+    .main_body .content .media img{
+        width: 100vw;
+        height: auto;
+        content: url('./assets/mobile-media.png');
+        margin: 0 -1rem;
+        position: absolute;
+    }
+
+    .main_body .content{
+        margin-top: 6rem;
+    }
+
+    .main_body .content .text{
+        display: none;
+    }
+
+    .card-1{order: 2;}
+    .card-2{order: 1;}
+    .card-3{order: 4;}
+    .card-4{order: 3;}
+
+}
+/* ////////////////////////////////// Responsiveness for mobile screen End ///////////////////////////////////// */
